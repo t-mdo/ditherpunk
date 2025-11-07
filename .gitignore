@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+dither-wasm/target/
+dither-wasm/pkg/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
