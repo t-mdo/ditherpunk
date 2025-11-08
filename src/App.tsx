@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import init, { apply_dithering } from "../dither-wasm/pkg/dither_wasm";
 import "./App.css";
+import { Slider } from "./components/ui/slider";
 
 function App() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -71,6 +72,7 @@ function App() {
 
   return (
     <div className="flex flex-col gap-8">
+      <Slider defaultValue={[42]} max={32} />
       <input
         type="file"
         id="avatar"
