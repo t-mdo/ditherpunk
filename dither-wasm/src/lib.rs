@@ -37,7 +37,7 @@ fn generate_bayer_matrix(n: usize) -> Vec<u8> {
 }
 
 #[wasm_bindgen]
-pub fn apply_dithering(pixels: &[u8], width: usize, matrix_size: usize) -> Vec<u8> {
+pub fn wasm_apply_dithering(pixels: &[u8], width: usize, matrix_size: usize) -> Vec<u8> {
     let mut new_pixels = vec![0u8; pixels.len()];
     let matrix = generate_bayer_matrix(matrix_size);
     let matrix_max_value = matrix.iter().max().unwrap();
