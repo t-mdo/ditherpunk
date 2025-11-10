@@ -83,9 +83,9 @@ function App() {
     for (let i = 0; i < image.pixels.length; i++) {
       const pixel = ditheredPixels[i];
 
-      rgbaPixels[i * 4] = !pixel ? 0 : 255;
-      rgbaPixels[i * 4 + 1] = !pixel ? 0 : 255;
-      rgbaPixels[i * 4 + 2] = 255;
+      rgbaPixels[i * 4] = pixel ? 255 : 0;
+      rgbaPixels[i * 4 + 1] = pixel ? 255 : 0;
+      rgbaPixels[i * 4 + 2] = pixel ? 255 : 0;
       rgbaPixels[i * 4 + 3] = 255;
     }
     const newImageData = new ImageData(
@@ -101,7 +101,11 @@ function App() {
   }, [image, matrixSizeIndex]);
 
   return (
-    <div className={cn("dark flex h-screen w-screen justify-between bg-background text-foreground")}>
+    <div
+      className={cn(
+        "dark flex h-screen w-screen justify-between bg-background text-foreground",
+      )}
+    >
       {image ? (
         <div className="flex w-72 shrink-0 flex-col items-center px-8 py-6">
           <div className="flex w-full flex-col items-center gap-2">
