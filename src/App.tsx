@@ -101,7 +101,7 @@ function App() {
   }, [image, matrixSizeIndex]);
 
   return (
-    <div className={cn("dark flex h-screen w-screen justify-between")}>
+    <div className={cn("dark flex h-screen w-screen justify-between bg-background text-foreground")}>
       {image ? (
         <div className="flex w-72 shrink-0 flex-col items-center px-8 py-6">
           <div className="flex w-full flex-col items-center gap-2">
