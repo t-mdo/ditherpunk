@@ -107,8 +107,8 @@ function App() {
       )}
     >
       {image ? (
-        <div className="flex w-72 shrink-0 flex-col items-center px-8 py-6">
-          <div className="flex w-full flex-col items-center gap-2">
+        <div className="flex w-72 shrink-0 flex-col items-center bg-neutral-900 px-8 py-6">
+          <div className="flex w-full flex-col items-center gap-4">
             Matrix size {matrixSizes[matrixSizeIndex]}
             <Slider
               value={[matrixSizeIndex]}

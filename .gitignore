@@ -25,3 +25,4 @@ dither-wasm/pkg/
 *.njsproj
 *.sln
 *.sw?
+.vercel
